@@ -1,0 +1,251 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+} 
+header div.fondoHeader{
+	background-color: #fbf3eb;
+	margin: 0px 0px 0px 0px;
+}
+
+.fondo-color {
+	background-color: #fbf3eb;
+}
+
+body {
+	background-color: #fbf3eb;
+}
+
+main {
+	font-size: 0.8rem;
+	background-color: #fbf3eb;
+}
+
+@media only screen and (max-width: 767px){
+	main {
+		font-size: 1rem;
+	}
+	.logoTop {
+		width: 180px;
+	    height: 180px;
+	    border: none;
+	}
+	.foto-presentacion {
+		width: 50%;
+		height: 50%;
+	    display: none;
+	}
+	div p.texto-presentacion {
+		font-size: 1rem;
+		padding: 2%;
+		margin-top: 1%;
+	}
+    h1 {
+    	font-size: 1.8rem;
+    }
+    h1.oculto {
+    	display: none;
+    }
+    h3 {
+    	font-size: 1.3rem;
+    }
+    .subtituloTerapeutas {
+    	font-size: 1.1rem;
+    }
+    .miniTitulos {
+    	font-size: 1.1rem;
+    }
+    li.miniTitulos p {
+    	font-size: 1rem;
+    }
+    .imagenesPagina {
+    	width: 100%;
+    	height: 100%;
+    }
+    .fotosTienda {
+    	width: 100%;
+    	height: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+	main {
+		font-size: 1rem;
+	}
+	p.textoInicio {
+		font-size: 1rem;
+	}
+	h1.oculto {
+		display: none;
+	}	
+	.flex-presentacion {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.flex-texto-pres {
+		display: flex;
+		flex-direction: row;
+	}
+	.imagenesPagina {
+		width: 100%;
+		height: 100%;
+	}
+	.miniTitulos {
+		font-size: 1.2rem;
+	}
+	li.miniTitulos p {
+		font-size: 1rem;
+	}
+	.fotosTienda {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media only screen and (min-width: 991px) {
+	p.textoInicio {
+		font-size: 1.1rem;
+	}
+	h1.oculto {
+		display: none;
+	}
+	.miniTitulos {
+		font-size: 1.3rem;
+	}
+	li.miniTitulos p {
+		font-size: 1.1rem;
+	}
+	.fotosTienda {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+/* imagenes de paginas y logos */
+.logoTop {
+	width: 16%;
+	height: 16%;
+	padding: 1%;
+	border: none;
+	margin: 1% 42% 1% 42%;
+}
+
+.imagenInicio {
+	width: 100%;
+	border: none;
+	margin:0;
+	padding: 0;
+}
+
+
+
+/* titulos y subtitulos */
+
+.titulosPagina {
+	color: #9b1117;
+	font-family: Acme, sans-serif;
+	background-color: #ccecdf;
+}
+
+.subtitulosPagina {
+	color: #9b1117;
+	font-family: Acme, sans-serif;
+	margin: 0%;
+	padding: 1%;
+	background-color: #f7e3b2;
+}
+.subtituloTerapeutas {
+	color: #449f90;
+	font-family: Raleway, sans-serif;
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.miniTitulos {
+	color: #51b4a4 ;
+	letter-spacing: 1px;
+}
+
+h1.oculto {
+	display: none;
+}
+
+.fotosTienda {
+	width: 100%;
+	height: 100%;
+}
+
+/*transiciones , animaciones*/
+
+@keyframes imagenPag {
+	0% {opacity: 0%;}
+	60% {opacity: 50%;}
+	100% {opacity: 100%;}
+}
+
+.imagenPag {
+	animation-name: imagenPag;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+
+}
+
+@keyframes animacionTitulos {
+	0% {transform: translateX(-100%);}
+	100% {transform: translateX(0%);}
+}
+.animacionTitulos {
+	animation-name: animacionTitulos;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+
+@keyframes animacionSubtitulos {
+	0% {transform: translateX(-100%);}
+	100% {transform: translateX(0%);}
+}
+.animacionSubtitulos {
+	animation-name: animacionTitulos;
+	animation-duration: 4.5s;
+	animation-iteration-count: 1;
+}
+
+p.textoContactanos:hover {
+	font-size: 120%;
+}
+
+@keyframes parrafoPagina {
+	0% {opacity: 0%;}
+	50% {opacity: 0%;}
+	100% {opacity: 100%;}
+}
+.parrafoPagina {
+    animation-name: parrafoPagina;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+
+@keyframes animacionHeader {
+	0% {transform: translateY(-100%); opacity: 0%;}
+	100% {transform: translateY(0%); opacity: 100%;}
+}
+
+.animacionHeader {
+	animation-name: animacionHeader;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+
+
+
+
+
+
+
+
+
+
+

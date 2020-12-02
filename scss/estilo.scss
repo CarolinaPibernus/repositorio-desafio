@@ -1,0 +1,99 @@
+$color-fondo: beige;
+$gris: grey;
+
+$color-texto: (titulos: #9b1117,subtitulos: #9b1117,principal: #3c475d,secundario: black,extras: #51b4a4);
+
+@each $name, $tono in $color-texto {
+	.texto-#{$name} {
+		color:#{$tono};
+	}
+}
+$size-font-base: 16px;
+$size-font-xl: 45px;
+$size-font-grande: 30px;
+$size-font-mediana: 18px;
+$size-font-chica: 12px;
+
+$font-titulos: Acme, sans-serif;
+$font-general: Raleway, sans-serif;
+
+body {
+	font-size: $size-font-base;
+	background-color: $color-fondo;
+	header {
+	
+		img {
+			width: 16%;
+			height: 16%;
+			border-radius: 20%; 
+			margin: 2% 42% 2% 42%; 
+		} 
+			
+		nav {
+			ul {
+			   font-size: $size-font-base;
+			   color: $gris;
+			   font-family: $font-general;
+			   list-style-type: none;
+			   display: flex;
+			   flex-direction: row;
+			   justify-content: space-between;
+
+			    li {
+			       font-size: $size-font-base;
+			       text-decoration: none;
+
+			       a {
+			       	color: $gris;
+			       	text-decoration: none;
+			       	font-weight: bold;
+			       }
+			       a:hover {
+			       	color: red;
+			       	text-shadow: 2px 2px 1px $gris;
+			       }
+			    }
+			}
+		}
+	}
+
+	main {
+		color: grey; 
+		h1 {
+		   font-size: $size-font-xl;
+		   font-family: $font-titulos;
+		   text-transform: uppercase;
+		}
+		h3 {
+			letter-spacing: 2px;
+			background-color: grey;
+			padding: 1%;
+		}
+		h4 {
+			color: red;
+			text-shadow: 1px 1px red;
+			font-size: $size-font-mediana;
+			letter-spacing: 1px;
+			padding-left: 3%;
+		}
+		p {
+			padding: 2%;
+		}
+		img {
+			border-radius: 50%;
+		}
+		ul {
+			list-style-type: none;
+		}
+
+		div {
+			ul {
+				list-style-type: none;
+
+			}
+		}
+	}
+}
+
+
+	
