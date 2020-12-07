@@ -1,44 +1,53 @@
-$color-fondo: beige;
-$gris: grey;
+/*Colores*/
+$fondo-pagina: #fffdec;
+$fondo-titulos: #fff9b9;
+$fondo-secundario: #eff8f8;
+$fondo-nav: #ffec31;
+$color-titulo-1: #ffc201;
+$color-titulo-2: #e10b38;
+$amarillo: #ffec31;
+$amarillo-claro: #ffd345;
+$beige: #fbf3eb;
+$aguamarina: #eff8f8;
+$gris: #3c475d;
+$gris-claro: #cbd1de;
+$verde-oscuro: #138359;
+$azul: #235f51;
+$rojo-oscuro: #e10b38;
 
-$color-texto: (titulos: #9b1117,subtitulos: #9b1117,principal: #3c475d,secundario: black,extras: #51b4a4);
+$color-texto: (titulos: $rojo-oscuro, subtitulos: $rojo-oscuro, principal: $gris, secundario: $azul, extra: $verde-oscuro);
 
 @each $name, $tono in $color-texto {
 	.texto-#{$name} {
 		color:#{$tono};
 	}
 }
-$size-font-base: 16px;
-$size-font-xl: 45px;
-$size-font-grande: 30px;
-$size-font-mediana: 18px;
-$size-font-chica: 12px;
+/*Tamaño de fuentes y tipografias */
+$size-font-base: 1rem;
+$size-font-chica: 0.9rem;
+$size-font-mediana: 1.1rem;
+$size-font-grande: 1.3rem;
+$size-font-xl: 1.8rem;
 
 $font-titulos: Acme, sans-serif;
 $font-general: Raleway, sans-serif;
 
 body {
 	font-size: $size-font-base;
-	background-color: $color-fondo;
+	background-color: $fondo-pagina;
 	header {
-	
-		img {
-			width: 16%;
-			height: 16%;
-			border-radius: 20%; 
-			margin: 2% 42% 2% 42%; 
-		} 
-			
+		background-color: $fondo-pagina;
+		margin: 0px 0px 0px 0px;
+				
 		nav {
+			background-color: $fondo-nav;
 			ul {
 			   font-size: $size-font-base;
 			   color: $gris;
 			   font-family: $font-general;
 			   list-style-type: none;
-			   display: flex;
-			   flex-direction: row;
-			   justify-content: space-between;
-
+			   background-color: $fondo-nav;
+			   
 			    li {
 			       font-size: $size-font-base;
 			       text-decoration: none;
@@ -49,7 +58,7 @@ body {
 			       	font-weight: bold;
 			       }
 			       a:hover {
-			       	color: red;
+			       	color: $rojo-oscuro;
 			       	text-shadow: 2px 2px 1px $gris;
 			       }
 			    }
@@ -58,42 +67,152 @@ body {
 	}
 
 	main {
-		color: grey; 
-		h1 {
+		color: $gris; 
+		font-size: $size-font-chica;
+		section {
+        
+		   h1 {
 		   font-size: $size-font-xl;
 		   font-family: $font-titulos;
 		   text-transform: uppercase;
-		}
-		h3 {
+		   background-color: $fondo-titulos;
+		   }
+
+		   h3 {
 			letter-spacing: 2px;
-			background-color: grey;
+			background-color: $gris;
 			padding: 1%;
-		}
-		h4 {
-			color: red;
-			text-shadow: 1px 1px red;
+		   }
+		   h4 {
+			color: $gris;
+			text-shadow: 1px 1px $rojo-oscuro;
 			font-size: $size-font-mediana;
 			letter-spacing: 1px;
 			padding-left: 3%;
-		}
-		p {
+		   }
+		    p {
 			padding: 2%;
-		}
-		img {
-			border-radius: 50%;
-		}
-		ul {
+		   }
+		
+		    ul {
 			list-style-type: none;
-		}
+		    }
 
-		div {
-			ul {
-				list-style-type: none;
+		  div {
 
+			  ul {
+				 list-style-type: none;
+
+			  }
+			  img {
+				width: 100%;
+			  }
 			}
 		}
 	}
+	footer {
+		color: $gris;
+		font-family: $font-general;
+		background-color: $fondo-nav;
+		margin: 1% 0% 1% 0%;
+		div {
+			padding-top: 0.5%;
+		    h6 {
+			   font-size: $size-font-base;
+			   margin-bottom: 1%;
+			   margin-top: 0%;
+		    }
+		    p {
+			   font-size: $size-font-chica;
+		    }
+		    a {
+			   font-size: $size-font-chica;
+		    }
+	    }
+	}
+
 }
 
+
+
+/* Animaciones y Transiciones */
+@keyframes imagenPag {
+	0% {opacity: 0%;}
+	60% {opacity: 50%;}
+	100% {opacity: 100%;}
+}
+
+.imagenPag {
+	animation-name: imagenPag;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+
+}
+
+@keyframes animacionTitulos {
+	0% {transform: translateX(-100%);}
+	100% {transform: translateX(0%);}
+}
+.animacionTitulos {
+	animation-name: animacionTitulos;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+
+@keyframes animacionSubtitulos {
+	0% {transform: translateX(-100%);}
+	100% {transform: translateX(0%);}
+}
+.animacionSubtitulos {
+	animation-name: animacionTitulos;
+	animation-duration: 4.5s;
+	animation-iteration-count: 1;
+}
+
+@keyframes animacionHeader {
+	0% {transform: translateY(-100%); opacity: 0%;}
+	100% {transform: translateY(0%); opacity: 100%;}
+}
+
+.animacionHeader {
+	animation-name: animacionHeader;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+@keyframes parrafoPagina {
+	0% {opacity: 0%;}
+	50% {opacity: 0%;}
+	100% {opacity: 100%;}
+}
+
+.parrafoPagina {
+    animation-name: parrafoPagina;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+p.textoContactanos:hover {
+	font-size: 120%;
+}
+
+
+@media only screen and (max-width: 767px){
+	main {
+		font-size: $size-font-base;
+		header {
+			div {
+
+
+			
+			    img {
+
+				    width: 150px;
+	                height: 150px;
+	                border: none; 
+	            }    
+			}
+		}
+	}
+
+}
 
 	
