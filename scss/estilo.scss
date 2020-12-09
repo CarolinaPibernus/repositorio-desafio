@@ -1,6 +1,12 @@
-/*Colores*/
-$fondo-pagina: #fffdec;
-$fondo-titulos: #fff9b9;
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+$fondo-pagina: #fbf3eb;
+$fondo-titulos: #eff8f8;
+$fondo-subtitulos: #ffffe3;
 $fondo-secundario: #eff8f8;
 $fondo-nav: #ffec31;
 $color-titulo-1: #ffc201;
@@ -14,23 +20,23 @@ $gris-claro: #cbd1de;
 $verde-oscuro: #138359;
 $azul: #235f51;
 $rojo-oscuro: #e10b38;
+$crema: #ffffe3;
 
-$color-texto: (titulos: $rojo-oscuro, subtitulos: $rojo-oscuro, principal: $gris, secundario: $azul, extra: $verde-oscuro);
-
-@each $name, $tono in $color-texto {
-	.texto-#{$name} {
-		color:#{$tono};
-	}
-}
-/*Tamaño de fuentes y tipografias */
 $size-font-base: 1rem;
+$size-font-xs: 0.8rem;
 $size-font-chica: 0.9rem;
 $size-font-mediana: 1.1rem;
-$size-font-grande: 1.3rem;
-$size-font-xl: 1.8rem;
+$size-font-grande: 1.5rem;
+$size-font-xl: 2.3rem;
 
 $font-titulos: Acme, sans-serif;
 $font-general: Raleway, sans-serif;
+
+@mixin propiedades-texto($font-family, $font-size, $color) {
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $color;
+}
 
 body {
 	font-size: $size-font-base;
@@ -38,28 +44,26 @@ body {
 	header {
 		background-color: $fondo-pagina;
 		margin: 0px 0px 0px 0px;
+		h1 { 
+			display: none;
+		}
 				
 		nav {
 			background-color: $fondo-nav;
 			ul {
-			   font-size: $size-font-base;
-			   color: $gris;
-			   font-family: $font-general;
+			   @include propiedades-texto($font-general, $size-font-base, $gris);
 			   list-style-type: none;
 			   background-color: $fondo-nav;
 			   
 			    li {
-			       font-size: $size-font-base;
-			       text-decoration: none;
-
 			       a {
-			       	color: $gris;
-			       	text-decoration: none;
-			       	font-weight: bold;
+   				    @include propiedades-texto($font-general, $size-font-base, $gris);
+    		       	text-decoration: none;
 			       }
 			       a:hover {
-			       	color: $rojo-oscuro;
-			       	text-shadow: 2px 2px 1px $gris;
+			       	font-size: $size-font-mediana;
+			       	color: $amarillo-claro;
+			       	text-shadow: 2px 2px 2px $gris;
 			       }
 			    }
 			}
@@ -67,28 +71,40 @@ body {
 	}
 
 	main {
-		color: $gris; 
-		font-size: $size-font-chica;
+		div {
+			h1 {
+		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
+			text-transform: uppercase;
+		    background-color: $fondo-titulos;
+		    padding: 1%;
+		    font-weight: bold;			
+			}
+		}
+
+
+		@include propiedades-texto($font-general, $size-font-base, $gris);
 		section {
         
 		   h1 {
-		   font-size: $size-font-xl;
-		   font-family: $font-titulos;
-		   text-transform: uppercase;
-		   background-color: $fondo-titulos;
+		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
+		    text-transform: uppercase;
+		    background-color: $fondo-titulos;
+		    padding: 1%;
+		    font-weight: bold;
 		   }
 
 		   h3 {
+		   	@include propiedades-texto($font-titulos, $size-font-grande, $rojo-oscuro);
 			letter-spacing: 2px;
-			background-color: $gris;
+			background-color: $fondo-subtitulos;
+			font-weight: bold;
 			padding: 1%;
 		   }
 		   h4 {
-			color: $gris;
-			text-shadow: 1px 1px $rojo-oscuro;
-			font-size: $size-font-mediana;
+		   	@include propiedades-texto($font-general, $size-font-mediana, $verde-oscuro);
 			letter-spacing: 1px;
 			padding-left: 3%;
+			font-weight: bold;
 		   }
 		    p {
 			padding: 2%;
@@ -106,6 +122,7 @@ body {
 			  }
 			  img {
 				width: 100%;
+				height: 100%;
 			  }
 			}
 		}
@@ -116,77 +133,203 @@ body {
 		background-color: $fondo-nav;
 		margin: 1% 0% 1% 0%;
 		div {
-			padding-top: 0.5%;
+			padding-top: 1%;
+			padding-left: 0%;
+			margin-left: 0%;
 		    h6 {
-			   font-size: $size-font-base;
+			   font-size: $size-font-chica;
 			   margin-bottom: 1%;
 			   margin-top: 0%;
 		    }
 		    p {
-			   font-size: $size-font-chica;
+			   font-size: $size-font-xs;
+			   padding-left: 0%;
 		    }
 		    a {
-			   font-size: $size-font-chica;
+			   font-size: $size-font-xs;
 		    }
 	    }
 	}
 
 }
+.contacto {
+	background-color: $fondo-titulos;
+}
 
 
+@media only screen and (max-width: 767px){
+	header {
+			div {			
+			    img {
+				    width: 35%;
+	                height: 35%;
+	                border: none; 
+	            }    
+			}
+	}
+	main {
+		font-size: $size-font-base;
+		section {
+			div{
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		
+	
+	}	
+	footer {
+		font-size: $size-font-xs;
+		div {
+			padding-left: 1%;
+			h6{
+				font-size: $size-font-chica;
+			}
+		}
+	}
+
+
+}
+@media only screen and (min-width: 768px){
+	header {
+			div {			
+			    img {
+				    width: 25%;
+	                height: 25%;
+	                border: none; 
+	            }    
+			}
+	}
+	main {
+		font-size: $size-font-base;
+		section {
+			div{
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	
+	}	
+	footer {
+		font-size: $size-font-xs;
+		div {
+			padding-left: 1%;
+			h6{
+				font-size: $size-font-chica;
+			}
+		}
+	}
+
+
+}
+@media only screen and (min-width: 991px){
+	header {
+			div {			
+			    img {
+				    width: 20%;
+	                height: 20%;
+	                border: none; 
+	            }    
+			}
+	}
+	main {
+		font-size: $size-font-base;
+		section {
+			div{
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		
+	
+	}
+	footer {
+		font-size: $size-font-chica;
+		div {
+			padding-left: 3%;
+			h6{
+				font-size: $size-font-base;
+			}
+			p {
+				font-size: $size-font-base;
+			}
+			a {
+				font-size: $size-font-base;
+			}
+		}
+	}	
+
+
+}
+/*Botones*/
+$color-botones: (amarillo: $amarillo-claro, aguamarina: $aguamarina, crema: $crema);
+
+@each $name, $tono in $color-botones {
+	.boton-#{$name} {
+		background-color:#{$tono};
+        color: $gris;
+        border: solid 1px $amarillo;
+	}
+}
 
 /* Animaciones y Transiciones */
-@keyframes imagenPag {
+@keyframes animacion-foto {
 	0% {opacity: 0%;}
 	60% {opacity: 50%;}
 	100% {opacity: 100%;}
 }
 
-.imagenPag {
-	animation-name: imagenPag;
+.animacion-foto {
+	animation-name: animacion-foto;
 	animation-duration: 3s;
 	animation-iteration-count: 1;
 
 }
 
-@keyframes animacionTitulos {
+@keyframes animacion-titulos {
 	0% {transform: translateX(-100%);}
 	100% {transform: translateX(0%);}
 }
-.animacionTitulos {
-	animation-name: animacionTitulos;
+.animacion-titulos {
+	animation-name: animacion-titulos;
 	animation-duration: 3s;
 	animation-iteration-count: 1;
 }
 
-@keyframes animacionSubtitulos {
+@keyframes animacion-subtitulos {
 	0% {transform: translateX(-100%);}
 	100% {transform: translateX(0%);}
 }
-.animacionSubtitulos {
-	animation-name: animacionTitulos;
+.animacion-subtitulos {
+	animation-name: animacion-subtitulos;
 	animation-duration: 4.5s;
 	animation-iteration-count: 1;
 }
 
-@keyframes animacionHeader {
+@keyframes animacion-header {
 	0% {transform: translateY(-100%); opacity: 0%;}
 	100% {transform: translateY(0%); opacity: 100%;}
 }
 
-.animacionHeader {
-	animation-name: animacionHeader;
+.animacion-header {
+	animation-name: animacion-header;
 	animation-duration: 3s;
 	animation-iteration-count: 1;
 }
-@keyframes parrafoPagina {
+@keyframes animacion-parrafo {
 	0% {opacity: 0%;}
 	50% {opacity: 0%;}
 	100% {opacity: 100%;}
 }
 
-.parrafoPagina {
-    animation-name: parrafoPagina;
+.animacion-parrafo {
+    animation-name: animacion-parrafo;
 	animation-duration: 5s;
 	animation-iteration-count: 1;
 }
@@ -195,24 +338,5 @@ p.textoContactanos:hover {
 }
 
 
-@media only screen and (max-width: 767px){
-	main {
-		font-size: $size-font-base;
-		header {
-			div {
-
-
-			
-			    img {
-
-				    width: 150px;
-	                height: 150px;
-	                border: none; 
-	            }    
-			}
-		}
-	}
-
-}
 
 	
