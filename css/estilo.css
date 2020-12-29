@@ -5,9 +5,9 @@
 
 body {
   font-size: 1rem;
-  background-color: #fffffc; }
+  background-color: #fffff6; }
   body header {
-    background-color: #fffffc;
+    background-color: #fffff6;
     margin: 0px 0px 0px 0px; }
     body header h1 {
       display: none; }
@@ -16,13 +16,13 @@ body {
       body header nav ul {
         font-family: Raleway, sans-serif;
         font-size: 1rem;
-        color: #3c475d;
+        color: #14181f;
         list-style-type: none;
         background-color: #ffec31; }
         body header nav ul li a {
           font-family: Raleway, sans-serif;
           font-size: 1rem;
-          color: #3c475d;
+          color: #14181f;
           text-decoration: none; }
         body header nav ul li a:hover {
           font-size: 1.1rem;
@@ -30,13 +30,13 @@ body {
   body main {
     font-family: Raleway, sans-serif;
     font-size: 1rem;
-    color: #3c475d; }
+    color: #14181f; }
     body main div h1 {
       font-family: Thasadith, sans-serif;
       font-size: 2.3rem;
       color: #e10b38;
       text-transform: uppercase;
-      background-color: #eff8f8;
+      background-color: #eafbf5;
       padding: 1%;
       font-weight: bold; }
     body main section h1 {
@@ -44,8 +44,8 @@ body {
       font-size: 2.3rem;
       color: #e10b38;
       text-transform: uppercase;
-      background-color: #eff8f8;
-      padding: 1%;
+      background-color: #eafbf5;
+      padding: 1% 1% 4% 1%;
       font-weight: bold; }
     body main section h3 {
       font-family: Thasadith, sans-serif;
@@ -57,7 +57,7 @@ body {
       padding: 1%;
       text-transform: uppercase; }
     body main section h4 {
-      font-family: Raleway, sans-serif;
+      font-family: Thasadith, sans-serif;
       font-size: 1.1rem;
       color: #138359;
       letter-spacing: 1px;
@@ -69,11 +69,14 @@ body {
       list-style-type: none; }
     body main section div ul {
       list-style-type: none; }
-    body main section div img {
-      width: 100%;
-      height: 100%; }
+    body main section div p .pagina__texto {
+      font-family: Raleway, sans-serif;
+      font-size: 1.1rem;
+      color: #138359;
+      margin: 2%;
+      padding: 3%; }
   body footer {
-    color: #3c475d;
+    color: #14181f;
     font-family: Raleway, sans-serif;
     background-color: #ffec31;
     margin: 1% 0% 1% 0%; }
@@ -82,60 +85,140 @@ body {
       padding-left: 0%;
       margin-left: 0%; }
       body footer div h6 {
-        font-size: 0.9rem;
-        margin-bottom: 1%;
-        margin-top: 0%; }
+        font-family: #eafbf5;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: 0.5%;
+        padding: 1%; }
       body footer div p {
         font-size: 0.8rem;
-        padding-left: 0%; }
+        padding: 1%;
+        margin: 0.5%;
+        border: none; }
       body footer div a {
-        font-size: 0.8rem; }
+        font-size: 0.8rem;
+        color: #138359; }
+
+#fotoHome {
+  width: 100%;
+  height: 100%; }
 
 .contacto {
-  background-color: #eff8f8; }
+  background-color: #eafbf5; }
+
+.header__logo {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center; }
+
+.logo__imagen {
+  width: 35%;
+  height: 35%;
+  padding: 2%;
+  margin-right: 0%;
+  border: none; }
+
+.logo__texto {
+  padding: 1%;
+  margin-left: 0%;
+  border: none; }
+
+.logo__texto--titulo {
+  font-family: Braggadocio, sans-serif;
+  font-size: 2.3rem;
+  color: #14181f;
+  padding-bottom: 0%;
+  margin-bottom: 0.5%;
+  border: none; }
+
+.logo__texto--sub {
+  font-family: Braggadocio, sans-serif;
+  font-size: 1.1rem;
+  color: #15cabe;
+  padding-top: 0%;
+  margin-bottom: 0.5%;
+  border: none; }
 
 @media only screen and (max-width: 767px) {
-  header div img {
-    width: 35%;
-    height: 35%;
-    border: none; }
   main {
     font-size: 1rem; }
     main section div img {
       width: 100%;
       height: 100%; }
+    main section div h1 {
+      font-size: 1.5rem; }
+    main section div p .pagina__texto {
+      font-size: 1rem; }
   footer {
     font-size: 0.8rem; }
     footer div {
       padding-left: 1%; }
       footer div h6 {
-        font-size: 0.9rem; } }
-
-@media only screen and (min-width: 768px) {
-  header div img {
+        font-size: 0.9rem; }
+  .header__logo {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center; }
+  .logo__imagen {
     width: 25%;
     height: 25%;
+    padding: 2%;
+    margin-right: 0%;
     border: none; }
+  .logo__texto {
+    padding: 1%;
+    margin-left: 0%;
+    border: none; }
+  .logo__texto--titulo {
+    font-family: Braggadocio, sans-serif;
+    font-size: 1.5rem;
+    color: #14181f; }
+  .logo__texto--sub {
+    font-family: Braggadocio, sans-serif;
+    font-size: 1.1rem;
+    color: #15cabe; } }
+
+@media only screen and (min-width: 768px) {
   main {
     font-size: 1rem; }
     main section div img {
       width: 100%;
       height: 100%; }
+    main section div p .pagina__texto {
+      font-size: 1.1rem; }
   footer {
     font-size: 0.8rem; }
     footer div {
       padding-left: 1%; }
       footer div h6 {
-        font-size: 0.9rem; } }
+        font-size: 0.9rem; }
+  .header__logo {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center; }
+  .logo__imagen {
+    width: 20%;
+    height: 20%;
+    padding: 2%;
+    margin-right: 0%;
+    border: none; }
+  .logo__texto {
+    padding: 1%;
+    margin-left: 0%;
+    border: none; }
+  .logo__texto--titulo {
+    font-family: Braggadocio, sans-serif;
+    font-size: 2.3rem;
+    color: #14181f; }
+  .logo__texto--sub {
+    font-family: Braggadocio, sans-serif;
+    font-size: 1.1rem;
+    color: #15cabe; } }
 
 @media only screen and (min-width: 991px) {
-  header div {
-    /*img {
-			    	width: 15%;
-			    	height: 15%;
-	                border: none; 
-	                padding: 1%;
-	            }  */ }
   main {
     font-size: 1rem; }
     main section div img {
@@ -150,22 +233,45 @@ body {
       footer div p {
         font-size: 1rem; }
       footer div a {
-        font-size: 1rem; } }
+        font-size: 1rem; }
+  .header__logo {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center; }
+  .logo__imagen {
+    width: 15%;
+    height: 15%;
+    padding: 1%;
+    margin-right: 0%;
+    border: none; }
+  .logo__texto {
+    padding: 1%;
+    margin-left: 0%;
+    border: none; }
+  .logo__texto--titulo {
+    font-family: Braggadocio, sans-serif;
+    font-size: 2.3rem;
+    color: #14181f; }
+  .logo__texto--sub {
+    font-family: Braggadocio, sans-serif;
+    font-size: 1.1rem;
+    color: #15cabe; } }
 
 /*Botones*/
 .boton-amarillo {
   background-color: #ffd345;
-  color: #3c475d;
+  color: #14181f;
   border: solid 1px #ffec31; }
 
 .boton-aguamarina {
   background-color: #eff8f8;
-  color: #3c475d;
+  color: #14181f;
   border: solid 1px #ffec31; }
 
 .boton-crema {
   background-color: #ffffe3;
-  color: #3c475d;
+  color: #14181f;
   border: solid 1px #ffec31; }
 
 /* Animaciones y Transiciones */
@@ -232,31 +338,3 @@ body {
 
 p.textoContactanos:hover {
   font-size: 120%; }
-
-.header__logo {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-center;
-  align-items: center; }
-
-.logo__imagen {
-  width: 15%;
-  height: 15%;
-  padding: 1%;
-  margin: 1% 1% 1% 30%;
-  border: none; }
-
-.logo__texto {
-  padding: 1%;
-  margin: 1% 30% 1% 1%;
-  border: none; }
-
-.logo__texto--titulo {
-  font-family: Braggadocio, sans-serif;
-  font-size: 2.3rem;
-  color: #3c475d; }
-
-.logo__texto--sub {
-  font-family: Braggadocio, sans-serif;
-  font-size: 1.1rem;
-  color: #eff8f8; }
