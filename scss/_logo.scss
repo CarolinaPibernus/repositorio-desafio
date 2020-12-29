@@ -1,0 +1,70 @@
+@mixin alto-ancho($height, $width) {
+	height: $height;
+	width: $width;
+}
+
+.header__logo {
+	@include propiedades-flex (flex, row wrap, center, center);
+}
+.logo__imagen {
+    @include alto-ancho(35%, 35%);
+	padding: 2%;
+	margin-right: 0%;
+	border: none;
+}
+.logo__texto {
+    padding: 1%;
+    margin-left: 0%;
+    border: none;
+}
+.logo__texto--titulo {
+	@include propiedades-texto ($font-logo, $size-font-grande, $gris);
+	font-weight: bold;
+	padding-bottom: 0%;
+	margin-bottom: 0.5%;
+	border: none;
+}
+.logo__texto--sub {
+	@include propiedades-texto ($font-logo, $size-font-mediana, $verde);
+	font-weight: bold;
+	padding-top: 0%;
+	margin-bottom: 0.5%;
+	border: none;
+}
+@media only screen and (max-width: 767px){
+
+	.logo__imagen {
+		@include alto-ancho(25%, 25%);
+	}
+		
+}
+
+@media only screen and (min-width: 768px){
+	
+	.logo__imagen {
+	    @include alto-ancho(20%, 20%);
+	}
+	.logo__texto--titulo {
+		@include propiedades-texto ($font-logo, $size-font-xl, $gris);
+	}
+	.logo__texto--sub {
+		@include propiedades-texto ($font-logo, $size-font-mediana, $verde);
+
+	}
+
+}
+
+@media only screen and (min-width: 991px){
+	
+	.logo__imagen {
+		@include alto-ancho(15%, 15%);
+	}
+	.logo__texto--titulo {
+		@include propiedades-texto ($font-logo, $size-font-xl, $gris);
+	}
+	.logo__texto--sub {
+		@include propiedades-texto ($font-logo, $size-font-mediana, $verde);
+
+	}	
+}
+

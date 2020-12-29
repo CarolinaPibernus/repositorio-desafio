@@ -4,10 +4,14 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+html {
+	font-size: 100%;
+}
 $fondo-pagina: #fffff6;
 $fondo-titulos: #eafbf5;
 $fondo-subtitulos: #fffeba;
-$fondo-secundario: #eff8f8;
+$fondo-secundario: #e8f7f7;
 $fondo-nav: #ffec31;
 $color-titulo-1: #9e234a;
 $color-titulo-2: #e10b38;
@@ -30,7 +34,7 @@ $size-font-mediana: 1.1rem;
 $size-font-grande: 1.5rem;
 $size-font-xl: 2.2rem;
 
-$font-logo: braggadocio, sans-serif;
+$font-logo: Thasadith, sans-serif;
 $font-titulos: Thasadith, sans-serif;
 $font-general: Raleway, sans-serif;
 
@@ -141,8 +145,7 @@ body {
 		}
 	}
 	footer {
-		color: $gris;
-		font-family: $font-general;
+		@include propiedades-texto($font-general, $size-font-xs, $gris)
 		background-color: $fondo-nav;
 		margin: 1% 0% 1% 0%;
 		div {
@@ -151,21 +154,17 @@ body {
 			margin-left: 0%;
 		    h6 {
 		       font-family: $fondo-titulos;
-			   font-size: $size-font-xs;
 			   font-weight: bold;
 			   margin: 0.5%;
 			   padding: 1%;
 		    }
 		    p {
-			   font-size: $size-font-xs;
 			   padding: 1%;
 			   margin: 0.5%;
 			   border: none;
-
 		    }
 
 		    a {
-			   font-size: $size-font-xs;
 			   color: $verde-oscuro;
 		    }
 	    }
@@ -179,45 +178,27 @@ body {
 .contacto {
 	background-color: $fondo-titulos;
 }
-.header__logo {
-	@include propiedades-flex (flex, row wrap, center, center);
-}
-.logo__imagen {
-	width: 35%;
-	height: 35%; 
+
+
+.textoContactanos {
+	@include propiedades-texto ($font-titulos, $size-font-mediana, $verde-oscuro);
+	font-weight: bold;
+	background-color: $fondo-secundario;
 	padding: 2%;
-	margin-right: 0%;
-	border: none;
-}
-.logo__texto {
-    padding: 1%;
-    margin-left: 0%;
-    border: none;
-}
-.logo__texto--titulo {
-	@include propiedades-texto ($font-logo, $size-font-xl, $gris);
-	padding-bottom: 0%;
-	margin-bottom: 0.5%;
-	border: none;
-}
-.logo__texto--sub {
-	@include propiedades-texto ($font-logo, $size-font-mediana, $verde);
-	padding-top: 0%;
-	margin-bottom: 0.5%;
-	border: none;
+	margin-left: 3%;
+	margin-right: 3%;
+	a {
+		color: $verde;
+	}
 }
 
 
 @media only screen and (max-width: 767px){
 	
 	main {
-		font-size: $size-font-base;
 		section {
 			div{
-				img {
-					width: 100%;
-					height: 100%;
-				}
+				
 				h1 {
 					font-size: $size-font-grande;
 				}
@@ -232,50 +213,21 @@ body {
 	
 	}	
 	footer {
-		font-size: $size-font-xs;
 		div {
-			padding-left: 1%;
 			h6{
 				font-size: $size-font-chica;
 			}
 		}
 	}
-	.header__logo {
-		@include propiedades-flex (flex, row wrap, center, center);
-	}
-	.logo__imagen {
-		width: 25%;
-		height: 25%; 
-		padding: 2%;
-		margin-right: 0%;
-		border: none;
-	}
-	.logo__texto {
-	    padding: 1%;
-	    margin-left: 0%;
-	    border: none;
-	}
-	.logo__texto--titulo {
-		@include propiedades-texto ($font-logo, $size-font-grande, $gris);
-	}
-	.logo__texto--sub {
-		@include propiedades-texto ($font-logo, $size-font-mediana, $verde);
-
-	}
-
+	
 
 }
 @media only screen and (min-width: 768px){
 	
 	main {
-		font-size: $size-font-base;
 		section {
 			div{
-				img {
-					width: 100%;
-					height: 100%;
-				}
-				p {
+			    p {
 					.pagina__texto {
 						font-size: $size-font-mediana;
 					}
@@ -285,56 +237,38 @@ body {
 	
 	}	
 	footer {
-		font-size: $size-font-xs;
 		div {
 			padding-left: 1%;
 			h6{
-				font-size: $size-font-chica;
+				font-size: $size-font-base;
+			}
+			p {
+				font-size: $size-font-base;
+			}
+			a {
+				font-size: $size-font-base;
 			}
 		}
 	}
-	.header__logo {
-		@include propiedades-flex (flex, row wrap, center, center);
-	}
-	.logo__imagen {
-		width: 20%;
-		height: 20%; 
-		padding: 2%;
-		margin-right: 0%;
-		border: none;
-	}
-	.logo__texto {
-	    padding: 1%;
-	    margin-left: 0%;
-	    border: none;
-	}
-	.logo__texto--titulo {
-		@include propiedades-texto ($font-logo, $size-font-xl, $gris);
-	}
-	.logo__texto--sub {
-		@include propiedades-texto ($font-logo, $size-font-mediana, $verde);
-
-	}
+	
 
 
 }
 @media only screen and (min-width: 991px){
-	
 	main {
-		font-size: $size-font-base;
 		section {
 			div{
-				img {
-					width: 100%;
-					height: 100%;
+			    p {
+					.pagina__texto {
+						font-size: $size-font-grande;
+					}
 				}
 			}
 		}
-		
 	
 	}
+	
 	footer {
-		font-size: $size-font-chica;
 		div {
 			padding-left: 3%;
 			h6{
@@ -348,29 +282,7 @@ body {
 			}
 		}
 	}
-	.header__logo {
-		@include propiedades-flex (flex, row wrap, center, center);
-
-	}
-	.logo__imagen {
-		width: 15%;
-		height: 15%; 
-		padding: 1%;
-		margin-right: 0%;
-		border: none;
-	}
-	.logo__texto {
-	    padding: 1%;
-	    margin-left: 0%;
-	    border: none;
-	}
-	.logo__texto--titulo {
-		@include propiedades-texto ($font-logo, $size-font-xl, $gris);
-	}
-	.logo__texto--sub {
-		@include propiedades-texto ($font-logo, $size-font-mediana, $verde);
-
-	}	
+	
 
 
 }
@@ -384,6 +296,9 @@ $color-botones: (amarillo: $amarillo-claro, aguamarina: $aguamarina, crema: $cre
         border: solid 1px $amarillo;
 	}
 }
+
+/*Logo*/
+@import "logo";
 
 /*Animaciones*/
 
