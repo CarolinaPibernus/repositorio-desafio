@@ -33,7 +33,7 @@ body {
     color: #14181f; }
     body main div h1 {
       font-family: Thasadith, sans-serif;
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       color: #e10b38;
       text-transform: uppercase;
       background-color: #eafbf5;
@@ -41,7 +41,7 @@ body {
       font-weight: bold; }
     body main section h1 {
       font-family: Thasadith, sans-serif;
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       color: #e10b38;
       text-transform: uppercase;
       background-color: #eafbf5;
@@ -75,6 +75,9 @@ body {
       color: #138359;
       margin: 2%;
       padding: 3%; }
+    body main section div p img {
+      width: 20%;
+      height: 20%; }
   body footer {
     color: #14181f;
     font-family: Raleway, sans-serif;
@@ -126,7 +129,7 @@ body {
 
 .logo__texto--titulo {
   font-family: Braggadocio, sans-serif;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   color: #14181f;
   padding-bottom: 0%;
   margin-bottom: 0.5%;
@@ -211,7 +214,7 @@ body {
     border: none; }
   .logo__texto--titulo {
     font-family: Braggadocio, sans-serif;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     color: #14181f; }
   .logo__texto--sub {
     font-family: Braggadocio, sans-serif;
@@ -251,7 +254,7 @@ body {
     border: none; }
   .logo__texto--titulo {
     font-family: Braggadocio, sans-serif;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     color: #14181f; }
   .logo__texto--sub {
     font-family: Braggadocio, sans-serif;
@@ -274,7 +277,7 @@ body {
   color: #14181f;
   border: solid 1px #ffec31; }
 
-/* Animaciones y Transiciones */
+/*Animaciones*/
 @keyframes animacion-foto {
   0% {
     opacity: 0%; }

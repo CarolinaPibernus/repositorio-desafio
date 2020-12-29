@@ -1,0 +1,57 @@
+@keyframes animacion-foto {
+	0% {opacity: 0%;}
+	60% {opacity: 50%;}
+	100% {opacity: 100%;}
+}
+
+.animacion-foto {
+	animation-name: animacion-foto;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+
+}
+
+@keyframes animacion-titulos {
+	0% {transform: translateX(-100%);}
+	100% {transform: translateX(0%);}
+}
+.animacion-titulos {
+	animation-name: animacion-titulos;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+
+@keyframes animacion-subtitulos {
+	0% {transform: translateX(-100%);}
+	100% {transform: translateX(0%);}
+}
+.animacion-subtitulos {
+	animation-name: animacion-subtitulos;
+	animation-duration: 4.5s;
+	animation-iteration-count: 1;
+}
+
+@keyframes animacion-header {
+	0% {transform: translateY(-100%); opacity: 0%;}
+	100% {transform: translateY(0%); opacity: 100%;}
+}
+
+.animacion-header {
+	animation-name: animacion-header;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+}
+@keyframes animacion-parrafo {
+	0% {opacity: 0%;}
+	50% {opacity: 0%;}
+	100% {opacity: 100%;}
+}
+
+.animacion-parrafo {
+    animation-name: animacion-parrafo;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+p.textoContactanos:hover {
+	font-size: 120%;
+}
