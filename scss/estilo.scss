@@ -56,10 +56,7 @@ body {
 	header {
 		background-color: $fondo-pagina;
 		margin: 0px 0px 0px 0px;
-		/*h1 { 
-			display: none;
-		}
-			*/	
+		
 		nav {
 			background-color: $fondo-nav;
 			ul {
@@ -85,7 +82,7 @@ body {
 		@include propiedades-texto($font-general, $size-font-base, $gris);
 		
 		div {
-			h1 {
+			h2 {
 		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
 			text-transform: uppercase;
 		    background-color: $fondo-titulos;
@@ -96,7 +93,7 @@ body {
 
 		section {
            
-		   h1 {
+		   h2 {
 		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
 		    text-transform: uppercase;
 		    background-color: $fondo-titulos;
@@ -199,7 +196,7 @@ body {
 		section {
 			div{
 				
-				h1 {
+				h2 {
 					font-size: $size-font-grande;
 				}
 				p {
