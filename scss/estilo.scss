@@ -93,15 +93,7 @@ body {
 
 		section {
            
-		   h2 {
-		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
-		    text-transform: uppercase;
-		    background-color: $fondo-titulos;
-		    padding: 1% 1% 4% 1%;
-		    font-weight: bold;
-		   }
-
-		   h3 {
+		    h3 {
 		   	@include propiedades-texto($font-titulos, $size-font-grande, $rojo-oscuro);
 			letter-spacing: 2px;
 			background-color: $fondo-subtitulos;
@@ -124,6 +116,13 @@ body {
 		    }
 
 		    div {
+		    	h2 {
+		    		@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
+		    	 text-transform: uppercase;
+		    	 background-color: $fondo-titulos;
+		    	 padding: 1% 1% 4% 1%;
+		    	 font-weight: bold;
+		    	}
 
 			    ul {
 				 list-style-type: none;
