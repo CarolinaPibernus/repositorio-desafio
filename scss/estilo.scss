@@ -56,7 +56,10 @@ body {
 	header {
 		background-color: $fondo-pagina;
 		margin: 0px 0px 0px 0px;
-		
+		h1 { 
+			display: none;
+		}
+				
 		nav {
 			background-color: $fondo-nav;
 			ul {
@@ -82,7 +85,7 @@ body {
 		@include propiedades-texto($font-general, $size-font-base, $gris);
 		
 		div {
-			h2 {
+			h1 {
 		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
 			text-transform: uppercase;
 		    background-color: $fondo-titulos;
@@ -93,7 +96,15 @@ body {
 
 		section {
            
-		    h3 {
+		   h1 {
+		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
+		    text-transform: uppercase;
+		    background-color: $fondo-titulos;
+		    padding: 1% 1% 4% 1%;
+		    font-weight: bold;
+		   }
+
+		   h3 {
 		   	@include propiedades-texto($font-titulos, $size-font-grande, $rojo-oscuro);
 			letter-spacing: 2px;
 			background-color: $fondo-subtitulos;
@@ -116,13 +127,6 @@ body {
 		    }
 
 		    div {
-		    	h2 {
-		    		@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
-		    	 text-transform: uppercase;
-		    	 background-color: $fondo-titulos;
-		    	 padding: 1% 1% 4% 1%;
-		    	 font-weight: bold;
-		    	}
 
 			    ul {
 				 list-style-type: none;
@@ -195,7 +199,7 @@ body {
 		section {
 			div{
 				
-				h2 {
+				h1 {
 					font-size: $size-font-grande;
 				}
 				p {
