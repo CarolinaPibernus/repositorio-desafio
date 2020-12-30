@@ -85,7 +85,7 @@ body {
 		@include propiedades-texto($font-general, $size-font-base, $gris);
 		
 		div {
-			h2 {
+			h1 {
 		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
 			text-transform: uppercase;
 		    background-color: $fondo-titulos;
@@ -96,7 +96,7 @@ body {
 
 		section {
            
-		   h2 {
+		   h1 {
 		   	@include propiedades-texto($font-titulos, $size-font-xl, $rojo-oscuro);
 		    text-transform: uppercase;
 		    background-color: $fondo-titulos;
